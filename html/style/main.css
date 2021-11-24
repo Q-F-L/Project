@@ -1,0 +1,39 @@
+.main-breadcrums a{
+    color: #888;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.main-breadcrums a::after{
+    color: #999;
+    content: " > ";
+}
+
+.main-country{
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #662170;
+    margin-bottom: 20px;
+}
+
+.main-filter-found{
+    background: #662170;
+    color: white;
+    width: 600px;
+    height: 60px;
+    border-radius: 0px 50px 50px 0px;
+}
+
+.main-filter-found-icon img{
+    transform: scale(-1, 1);
+    color: white;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.main-filter-found{
+    display: flex;
+}
