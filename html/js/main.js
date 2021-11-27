@@ -5,7 +5,7 @@ const main = {
                 1,
             ],
 
-            try: [
+            tur: [
                 {
                     id: 1,
                     topicTur: [
@@ -171,4 +171,4 @@ const main = {
     }
 }
 
-Vue.createApp(main).mount('#main')
+Vue.createApp(main).mount('#main');

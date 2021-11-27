@@ -245,8 +245,7 @@
 }
 
 .tyrs{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
     margin-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(215px, 1fr));
 }

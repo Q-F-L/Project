@@ -81,7 +81,7 @@
                         Цена
                     </div>
                     <div class="filter-button">
-                        Язык группы
+                        Количество мест
                     </div>
                     <div class="filter-button">
                         Рейтинг
@@ -99,12 +99,11 @@
                 <samp class="sort-filter-find-counter">Найдено 179 туров</samp>
             </div>
 
-            <div class="tyrs">
+            <div class="tyrs" v-for='(tour,index) in tur' :key="index">
                 <div class="tyr">
                     <div class="tyr-face">
                         <div class="tyr-face-border">
-                            <img class="tyr-face-bg"
-                                src="https://s1.1zoom.ru/prev2/604/Vietnam_Resorts_Phu_Quoc_Island_Pools_Palms_603496_300x200.jpg">
+                            <img class="tyr-face-bg" :src="tour.faceImg">
                         </div>
                         <div class="tyr-face-icons">
                             <div class="tyr-face-icon-list"><img
@@ -113,11 +112,11 @@
                         </div>
 
                         <div class="tyr-face-name">
-                            Экскурсия в яркий Гуджарат
+                            {{tour.name}}
                         </div>
                     </div>
                     <div class="tyr-description">
-                        <div class="tyr-country">Индия</div>
+                        <div class="tyr-country">{{tour.country}}</div>
                         <div class="tyr-day">
                             <nobr>18 дн.</nobr>
                             <nobr class="tyr-description-day">[01-18 апреля 2022 и ещё 8 дат]</nobr>
@@ -127,7 +126,7 @@
                             <div class="tyr-block">
                                 <img class="tryagent-img"
                                     src="https://cf.youtravel.me/tr:w-50,h-50/upload/main/173/173cbf21f0e6959db40a96af3326fda9.jpg">
-                                <samp class="tryagent-name">Навир</samp>
+                                <samp class="tryagent-name">{{ tour.tyragentName}}</samp>
                             </div>
                             <samp class="tryagent-price">От 97 897 &#8381</samp>
                         </div>
