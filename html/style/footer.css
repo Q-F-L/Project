@@ -87,9 +87,7 @@ footer {
 
 .footer-box{
     display: flex;
-    justify-content: space-between;
-    padding-left: 150px;
-    padding-right: 150px;
+    justify-content: space-around;
 }
 
 .footer-discription-list{
