@@ -1,9 +1,11 @@
 const main = {
-    date() {
+    data() {
         return {
             love: [
                 1,
             ],
+
+            arrFilter: [],
 
             tur: [
                 {
@@ -168,7 +170,9 @@ const main = {
             ],
 
         }
-    }
+    },
+    
 }
+
 
 Vue.createApp(main).mount('#main');

@@ -33,9 +33,7 @@
                 <nav class="header-menu">
                     <div>
                         <a href="" class="header-link-logo">
-                            <div class="header-logo">
-
-                            </div>
+                            <img class="header-logo" src="style/png/logo-black.webp">
                         </a>
                     </div>
 
@@ -67,7 +65,7 @@
     <main>
         <div id="main">
             <div class="main-breadcrums">
-                <a href="">Главная</a>
+                <a href="">Все туры</a>
             </div>
 
             <div class="main-filter">
@@ -77,6 +75,7 @@
                     <div class="filter-button">
                         Тип тура
                     </div>
+                    <div class></div>
                     <div class="filter-button">
                         Цена
                     </div>
@@ -93,14 +92,15 @@
                 <samp>Сортировать</samp>
                 <select class="sort-filter-btn">
                     <option>сначала популярные</option>
-                    <option>сначала популярные</option>
-                    <option>сначала популярные</option>
+                    <option>сначала новые</option>
+                    <option>повозрастанию цены</option>
                 </select>
                 <samp class="sort-filter-find-counter">Найдено 179 туров</samp>
             </div>
 
-            <div class="tyrs" v-for='(tour,index) in tur' :key="index">
-                <div class="tyr">
+            <div class="tyrs" >
+
+                <div class="tyr" v-for='(tour,index) in tur' :key="index">
                     <div class="tyr-face">
                         <div class="tyr-face-border">
                             <img class="tyr-face-bg" :src="tour.faceImg">
@@ -108,7 +108,7 @@
                         <div class="tyr-face-icons">
                             <div class="tyr-face-icon-list"><img
                                     src="https://youtravel.me/static/i/tour-page/compare.png" alt=""></div>
-                            <div class="tyr-face-icon-love"><img src="style/svg/heart.svg" alt=""></div>
+                            <div @click="love.push(tour.id)" class="tyr-face-icon-love"><img src="style/svg/heart.svg" alt=""></div>
                         </div>
 
                         <div class="tyr-face-name">
@@ -118,8 +118,8 @@
                     <div class="tyr-description">
                         <div class="tyr-country">{{tour.country}}</div>
                         <div class="tyr-day">
-                            <nobr>18 дн.</nobr>
-                            <nobr class="tyr-description-day">[01-18 апреля 2022 и ещё 8 дат]</nobr>
+                            <samp>18 дн.</samp>
+                            <samp class="tyr-description-day">[01-18 апреля 2022 и ещё 8 дат]</samp>
                         </div>
 
                         <div class="tyragent">
@@ -128,211 +128,7 @@
                                     src="https://cf.youtravel.me/tr:w-50,h-50/upload/main/173/173cbf21f0e6959db40a96af3326fda9.jpg">
                                 <samp class="tryagent-name">{{ tour.tyragentName}}</samp>
                             </div>
-                            <samp class="tryagent-price">От 97 897 &#8381</samp>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tyr">
-                    <div class="tyr-face">
-                        <div class="tyr-face-border">
-                            <img class="tyr-face-bg"
-                                src="https://s1.1zoom.ru/prev2/604/Vietnam_Resorts_Phu_Quoc_Island_Pools_Palms_603496_300x200.jpg">
-                        </div>
-                        <div class="tyr-face-icons">
-                            <div class="tyr-face-icon-list"><img
-                                    src="https://youtravel.me/static/i/tour-page/compare.png" alt=""></div>
-                            <div class="tyr-face-icon-love"><img src="style/svg/heart.svg" alt=""></div>
-                        </div>
-
-                        <div class="tyr-face-name">
-                            Экскурсия в яркий Гуджарат
-                        </div>
-                    </div>
-                    <div class="tyr-description">
-                        <div class="tyr-country">Индия</div>
-                        <div class="tyr-day">
-                            <nobr>18 дн.</nobr>
-                            <nobr class="tyr-description-day">[01-18 апреля 2022 и ещё 8 дат]</nobr>
-                        </div>
-
-                        <div class="tyragent">
-                            <div class="tyr-block">
-                                <img class="tryagent-img"
-                                    src="https://cf.youtravel.me/tr:w-50,h-50/upload/main/173/173cbf21f0e6959db40a96af3326fda9.jpg">
-                                <samp class="tryagent-name">Навир</samp>
-                            </div>
-                            <samp class="tryagent-price">От 97 897 &#8381</samp>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tyr">
-                    <div class="tyr-face">
-                        <div class="tyr-face-border">
-                            <img class="tyr-face-bg"
-                                src="https://s1.1zoom.ru/prev2/604/Vietnam_Resorts_Phu_Quoc_Island_Pools_Palms_603496_300x200.jpg">
-                        </div>
-                        <div class="tyr-face-icons">
-                            <div class="tyr-face-icon-list"><img
-                                    src="https://youtravel.me/static/i/tour-page/compare.png" alt=""></div>
-                            <div class="tyr-face-icon-love"><img src="style/svg/heart.svg" alt=""></div>
-                        </div>
-
-                        <div class="tyr-face-name">
-                            Экскурсия в яркий Гуджарат
-                        </div>
-                    </div>
-                    <div class="tyr-description">
-                        <div class="tyr-country">Индия</div>
-                        <div class="tyr-day">
-                            <nobr>18 дн.</nobr>
-                            <nobr class="tyr-description-day">[01-18 апреля 2022 и ещё 8 дат]</nobr>
-                        </div>
-
-                        <div class="tyragent">
-                            <div class="tyr-block">
-                                <img class="tryagent-img"
-                                    src="https://cf.youtravel.me/tr:w-50,h-50/upload/main/173/173cbf21f0e6959db40a96af3326fda9.jpg">
-                                <samp class="tryagent-name">Навир</samp>
-                            </div>
-                            <samp class="tryagent-price">От 97 897 &#8381</samp>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tyr">
-                    <div class="tyr-face">
-                        <div class="tyr-face-border">
-                            <img class="tyr-face-bg"
-                                src="https://s1.1zoom.ru/prev2/604/Vietnam_Resorts_Phu_Quoc_Island_Pools_Palms_603496_300x200.jpg">
-                        </div>
-                        <div class="tyr-face-icons">
-                            <div class="tyr-face-icon-list"><img
-                                    src="https://youtravel.me/static/i/tour-page/compare.png" alt=""></div>
-                            <div class="tyr-face-icon-love"><img src="style/svg/heart.svg" alt=""></div>
-                        </div>
-
-                        <div class="tyr-face-name">
-                            Экскурсия в яркий Гуджарат
-                        </div>
-                    </div>
-                    <div class="tyr-description">
-                        <div class="tyr-country">Индия</div>
-                        <div class="tyr-day">
-                            <nobr>18 дн.</nobr>
-                            <nobr class="tyr-description-day">[01-18 апреля 2022 и ещё 8 дат]</nobr>
-                        </div>
-
-                        <div class="tyragent">
-                            <div class="tyr-block">
-                                <img class="tryagent-img"
-                                    src="https://cf.youtravel.me/tr:w-50,h-50/upload/main/173/173cbf21f0e6959db40a96af3326fda9.jpg">
-                                <samp class="tryagent-name">Навир</samp>
-                            </div>
-                            <samp class="tryagent-price">От 97 897 &#8381</samp>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tyr">
-                    <div class="tyr-face">
-                        <div class="tyr-face-border">
-                            <img class="tyr-face-bg"
-                                src="https://s1.1zoom.ru/prev2/604/Vietnam_Resorts_Phu_Quoc_Island_Pools_Palms_603496_300x200.jpg">
-                        </div>
-                        <div class="tyr-face-icons">
-                            <div class="tyr-face-icon-list"><img
-                                    src="https://youtravel.me/static/i/tour-page/compare.png" alt=""></div>
-                            <div class="tyr-face-icon-love"><img src="style/svg/heart.svg" alt=""></div>
-                        </div>
-
-                        <div class="tyr-face-name">
-                            Экскурсия в яркий Гуджарат
-                        </div>
-                    </div>
-                    <div class="tyr-description">
-                        <div class="tyr-country">Индия</div>
-                        <div class="tyr-day">
-                            <nobr>18 дн.</nobr>
-                            <nobr class="tyr-description-day">[01-18 апреля 2022 и ещё 8 дат]</nobr>
-                        </div>
-
-                        <div class="tyragent">
-                            <div class="tyr-block">
-                                <img class="tryagent-img"
-                                    src="https://cf.youtravel.me/tr:w-50,h-50/upload/main/173/173cbf21f0e6959db40a96af3326fda9.jpg">
-                                <samp class="tryagent-name">Навир</samp>
-                            </div>
-                            <samp class="tryagent-price">От 97 897 &#8381</samp>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tyr">
-                    <div class="tyr-face">
-                        <div class="tyr-face-border">
-                            <img class="tyr-face-bg"
-                                src="https://s1.1zoom.ru/prev2/604/Vietnam_Resorts_Phu_Quoc_Island_Pools_Palms_603496_300x200.jpg">
-                        </div>
-                        <div class="tyr-face-icons">
-                            <div class="tyr-face-icon-list"><img
-                                    src="https://youtravel.me/static/i/tour-page/compare.png" alt=""></div>
-                            <div class="tyr-face-icon-love"><img src="style/svg/heart.svg" alt=""></div>
-                        </div>
-
-                        <div class="tyr-face-name">
-                            Экскурсия в яркий Гуджарат
-                        </div>
-                    </div>
-                    <div class="tyr-description">
-                        <div class="tyr-country">Индия</div>
-                        <div class="tyr-day">
-                            <nobr>18 дн.</nobr>
-                            <nobr class="tyr-description-day">[01-18 апреля 2022 и ещё 8 дат]</nobr>
-                        </div>
-
-                        <div class="tyragent">
-                            <div class="tyr-block">
-                                <img class="tryagent-img"
-                                    src="https://cf.youtravel.me/tr:w-50,h-50/upload/main/173/173cbf21f0e6959db40a96af3326fda9.jpg">
-                                <samp class="tryagent-name">Навир</samp>
-                            </div>
-                            <samp class="tryagent-price">От 97 897 &#8381</samp>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tyr">
-                    <div class="tyr-face">
-                        <div class="tyr-face-border">
-                            <img class="tyr-face-bg"
-                                src="https://s1.1zoom.ru/prev2/604/Vietnam_Resorts_Phu_Quoc_Island_Pools_Palms_603496_300x200.jpg">
-                        </div>
-                        <div class="tyr-face-icons">
-                            <div class="tyr-face-icon-list"><img
-                                    src="https://youtravel.me/static/i/tour-page/compare.png" alt=""></div>
-                            <div class="tyr-face-icon-love"><img src="style/svg/heart.svg" alt=""></div>
-                        </div>
-
-                        <div class="tyr-face-name">
-                            Экскурсия в яркий Гуджарат
-                        </div>
-                    </div>
-                    <div class="tyr-description">
-                        <div class="tyr-country">Индия</div>
-                        <div class="tyr-day">
-                            <nobr>18 дн.</nobr>
-                            <nobr class="tyr-description-day">[01-18 апреля 2022 и ещё 8 дат]</nobr>
-                        </div>
-
-                        <div class="tyragent">
-                            <div class="tyr-block">
-                                <img class="tryagent-img"
-                                    src="https://cf.youtravel.me/tr:w-50,h-50/upload/main/173/173cbf21f0e6959db40a96af3326fda9.jpg">
-                                <samp class="tryagent-name">Навир</samp>
-                            </div>
-                            <samp class="tryagent-price">От 97 897 &#8381</samp>
+                            <samp class="tryagent-price">От {{ tour.price }} &#8381</samp>
                         </div>
                     </div>
                 </div>

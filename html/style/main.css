@@ -2,13 +2,17 @@
     color: #888;
     text-decoration: none;
     list-style: none;
-    padding-left: 20px;
     font-size: 14px;
+    margin-left: 20px;
 }
 
 .main-breadcrums a::after{
     color: #999;
     content: " > ";
+}
+
+.main-breadcrums a:last-child::after{
+    content: "";
 }
 
 .main-filter{
@@ -138,6 +142,8 @@
 .tyr-face-bg{
     transition: 2s;
     display: block;
+    max-height: 200px;
+    min-width: 215px;
 }
 
 .tyr-face-bg:hover{
@@ -148,6 +154,7 @@
     display: inline-block;
     overflow: hidden;
     width: 215px;
+    height: 200px;
     border-radius: 5px 5px 0px 0px;
 }
 
@@ -193,6 +200,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 5px;
+    white-space: nowrap;
 }
 
 .tyr-country{
@@ -206,6 +214,7 @@
     display: flex;
     padding-top: 5px;
     font-size: 12px;
+    white-space: nowrap;
 }
 
 .tyr{
